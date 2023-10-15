@@ -60,6 +60,8 @@ export default function TextForm(props) {
             {/* value of rows is updated from 3 to 8 to increase in size of text box */}
             <textarea className="form-control" value = {text} onChange={handleOnChange} style={{backgroundColor: props.mode === 'dark' ? 'grey' : 'white', color: props.mode === 'dark' ? 'white' : 'black'}} id="myBox" rows="8" placeholder="Enter text here"></textarea>
         </div>
+        {/* We have included few buttons stated as conversion of text to Upper case, lower case, 
+        clear text from the box, copy the text written in the box, remove all extra spaces */}
         <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to Upper case</button>
         <button className="btn btn-primary mx-1" onClick={handleLowClick}>Convert to Lower case</button>
         <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear Text</button>

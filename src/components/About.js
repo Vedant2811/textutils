@@ -13,19 +13,20 @@ export default function About() {
     // This useState is created which will be used to change the state of mode
     const[btnText, setBtnText] = useState("Enable dark mode")
 
-    // This function is used to change the current style of the page to another 
+    // This function is used to change the current style of the page to another style where
+    // text color is white and bg is black i.e. "Dark Mode"
     const toggleStyle = () => {
         if(myStyle.color === 'black'){
             setMyStyle({
                 color : "white",
                 backgroundColor : "black"
-                })
+            })
             setBtnText("Enable light mode")
         } else{
             setMyStyle({
                 color : "black",
                 backgroundColor : "white"
-                })
+            })
             setBtnText("Enable dark mode")
         }
     }
@@ -35,6 +36,7 @@ export default function About() {
     // We have provided each accordian with myStyle object by inserting it into div tag 
     <div className = "container" style = {myStyle}>
         <h1 className='my-3'>About Us</h1>
+        {/* In this div tag we've included 3 accordian and updated all accordian w.r.t. style */}
         <div className="accordion" id="accordionExample">
             <div className="accordion-item" style = {myStyle}>
                 <h2 className="accordion-header">
